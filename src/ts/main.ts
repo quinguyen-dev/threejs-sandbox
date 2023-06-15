@@ -1,7 +1,5 @@
 import "/src/scss/main.scss";
-
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 /* Create essential three components */
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -37,3 +35,12 @@ function animate() {
 }
 
 animate();
+
+window.addEventListener("resize", onWindowResize, false);
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
