@@ -1,4 +1,4 @@
-import "../scss/main.scss";
+import "/src/scss/main.scss";
 
 import * as THREE from "three";
 
