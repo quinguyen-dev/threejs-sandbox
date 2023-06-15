@@ -1,0 +1,5 @@
+@use "./settings/config" as *;
+
+html {
+    background-color: $primary-background-color;
+}
